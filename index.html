@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Självskattning av Generell Självtillit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Självskattning av Generell Självtillit och Demografisk Information</h1>
+    </header>
+
+    <div class="container">
+        <p>Följande enkät innehåller ett antal påståenden som syftar till att mäta din tro på din förmåga att hantera utmaningar och uppnå mål. Vänligen ange i vilken utsträckning du håller med om varje påstående, samt fyll i de uppgifter som efterfrågas. Tack för att du deltar i denna studie!</p>
+        
+        <form id="survey-form" onsubmit="return validateForm()">
+            <h2>Del 1: Generell Självtillit (S-GSE)</h2>
+            
+            <!-- Updated to display horizontally -->
+            <div class="question-group">
+                <p>1. Jag kan alltid hitta en lösning på svåra problem om jag försöker tillräckligt hårt.</p>
+                <div class="options horizontal">
+                    <label><input type="radio" name="q1" value="1" required> Håller inte alls med</label>
+                    <label><input type="radio" name="q1" value="2"> Håller lite med</label>
+                    <label><input type="radio" name="q1" value="3"> Håller delvis med</label>
+                    <label><input type="radio" name="q1" value="4"> Håller med</label>
+                    <label><input type="radio" name="q1" value="5"> Håller helt med</label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <p>2. Även om någon motarbetar mig hittar jag ändå utvägar att nå mina mål.</p>
+                <div class="options horizontal">
+                    <label><input type="radio" name="q2" value="1" required> Håller inte alls med</label>
+                    <label><input type="radio" name="q2" value="2"> Håller lite med</label>
+                    <label><input type="radio" name="q2" value="3"> Håller delvis med</label>
+                    <label><input type="radio" name="q2" value="4"> Håller med</label>
+                    <label><input type="radio" name="q2" value="5"> Håller helt med</label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <p>3. Jag har inga svårigheter att hålla fast vid mina målsättningar och förverkliga mina mål.</p>
+                <div class="options horizontal">
+                    <label><input type="radio" name="q3" value="1" required> Håller inte alls med</label>
+                    <label><input type="radio" name="q3" value="2"> Håller lite med</label>
+                    <label><input type="radio" name="q3" value="3"> Håller delvis med</label>
+                    <label><input type="radio" name="q3" value="4"> Håller med</label>
+                    <label><input type="radio" name="q3" value="5"> Håller helt med</label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <p>4. I oväntade situationer vet jag alltid hur jag ska agera.</p>
+                <div class="options horizontal">
+                    <label><input type="radio" name="q4" value="1" required> Håller inte alls med</label>
+                    <label><input type="radio" name="q4" value="2"> Håller lite med</label>
+                    <label><input type="radio" name="q4" value="3"> Håller delvis med</label>
+                    <label><input type="radio" name="q4" value="4"> Håller med</label>
+                    <label><input type="radio" name="q4" value="5"> Håller helt med</label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <p>5. Till och med överraskande situationer tror jag mig klara av bra.</p>
+                <div class="options horizontal">
+                    <label><input type="radio" name="q5" value="1" required> Håller inte alls med</label>
+                    <label><input type="radio" name="q5" value="2"> Håller lite med</label>
+                    <label><input type="radio" name="q5" value="3"> Håller delvis med</label>
+                    <label><input type="radio" name="q5" value="4"> Håller med</label>
+                    <label><input type="radio" name="q5" value="5"> Håller helt med</label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <p>6. Tack vare min egen förmåga känner jag mig lugn även när jag ställs inför svårigheter.</p>
+                <div class="options horizontal">
+                    <label><input type="radio" name="q6" value="1" required> Håller inte alls med</label>
+                    <label><input type="radio" name="q6" value="2"> Håller lite med</label>
+                    <label><input type="radio" name="q6" value="3"> Håller delvis med</label>
+                    <label><input type="radio" name="q6" value="4"> Håller med</label>
+                    <label><input type="radio" name="q6" value="5"> Håller helt med</label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <p>7. Vad som än händer klarar jag mig alltid.</p>
+                <div class="options horizontal">
+                    <label><input type="radio" name="q7" value="1" required> Håller inte alls med</label>
+                    <label><input type="radio" name="q7" value="2"> Håller lite med</label>
+                    <label><input type="radio" name="q7" value="3"> Håller delvis med</label>
+                    <label><input type="radio" name="q7" value="4"> Håller med</label>
+                    <label><input type="radio" name="q7" value="5"> Håller helt med</label>
+                </div>
+            </div>
+
+            <h2>Del 2: Bakgrundsinformation</h2>
+
+            <div class="question-group">
+                <label>Kön:</label>
+                <div class="options">
+                    <label><input type="radio" name="gender" value="Man" required> Man</label>
+                    <label><input type="radio" name="gender" value="Kvinna"> Kvinna</label>
+                    <label><input type="radio" name="gender" value="Annat"> Annat</label>
+                    <label><input type="radio" name="gender" value="Vill ej ange"> Vill ej ange</label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <label>Ålder:</label>
+                <input type="number" id="age" name="age" min="0" required> år
+            </div>
+
+            <div class="question-group">
+                <label>Civilstånd:</label>
+                <div class="options">
+                    <label><input type="radio" name="civilstatus" value="Ogift" required> Ogift</label>
+                    <label><input type="radio" name="civilstatus" value="Gift/Registrerat partnerskap"> Gift/Registrerat partnerskap</label>
+                    <label><input type="radio" name="civilstatus" value="Sambo"> Sambo</label>
+                    <label><input type="radio" name="civilstatus" value="Skild"> Skild</label>
+                    <label><input type="radio" name="civilstatus" value="Änka/Änkling"> Änka/Änkling</label>
+                    <label><input type="radio" name="civilstatus" value="Annat"> Annat</label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <label>Utbildningsnivå:</label>
+                <div class="options">
+                    <label><input type="radio" name="education" value="Grundskola" required> Grundskola</label>
+                    <label><input type="radio" name="education" value="Gymnasieutbildning"> Gymnasieutbildning</label>
+                    <label><input type="radio" name="education" value="Eftergymnasial utbildning"> Eftergymnasial utbildning (högskola/universitet)</label>
+                    <label><input type="radio" name="education" value="Annat"> Annat: <input type="text" name="other-education"></label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <label>Anställningsstatus:</label>
+                <div class="options">
+                    <label><input type="radio" name="employment" value="Pensionär" required> Pensionär</label>
+                    <label><input type="radio" name="employment" value="Arbetande"> Arbetande (heltid eller deltid)</label>
+                    <label><input type="radio" name="employment" value="Arbetslös"> Arbetslös</label>
+                    <label><input type="radio" name="employment" value="Sjukskriven"> Sjukskriven</label>
+                    <label><input type="radio" name="employment" value="Annat"> Annat: <input type="text" name="other-employment"></label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <p>Samtycke:</p>
+                <p>Jag har tagit del av informationen och samtycker till att delta i denna undersökning.</p>
+                <div class="options">
+                    <label><input type="radio" name="consent" value="yes" required> Ja, jag samtycker</label>
+                    <label><input type="radio" name="consent" value="no"> Nej, jag samtycker inte</label>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Skicka in</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
