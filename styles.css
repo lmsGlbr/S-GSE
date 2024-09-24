@@ -83,3 +83,29 @@ input[type="number"] {
 .submit-btn:hover {
     background-color: #2980b9;
 }
+
+/* Header Style */
+.header {
+    background-color: #014B88; /* Updated header color */
+    color: white;
+    padding: 40px 0; /* Doubled header height */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Divider Style */
+.divider {
+    height: 2px; /* Adjust the height of the divider */
+    background-color: #3498db; /* You can change this color if desired */
+    margin: 20px 0; /* Space above and below the divider */
+}
+
+/* Footer Style */
+.footer {
+    background-color: #FDFBF7; /* Footer color */
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
